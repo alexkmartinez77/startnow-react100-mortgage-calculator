@@ -75,7 +75,9 @@ describe('Mortgage Calculator', function () {
         .select('select[name=term]', '30')
         .click('button[name=submit]')
         .wait('#output')
-        .evaluate(() => document.querySelector('#output').innerHTML)
+        .evaluate(() => {
+          console.log( document.querySelector('#output').innerHTML )
+          return document.querySelector('#output').innerHTML})
         .end()
         .then(result => expect(result).to.contain('1945.09', 'Expected mortgage payment didn\'t match'))
     );

@@ -5,7 +5,7 @@ import { shallow } from 'enzyme';
 import App from './../src/js/app';
 
 describe('App Component', function () {
-  this.timeout(6500);
+  this.timeout(15000);
   this.slow(3000);
 
   it('should shallow render', () => {
